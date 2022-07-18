@@ -1,17 +1,39 @@
 import React from "react";
 import { Link } from "react-router-dom";
+import { Dropdown, Nav } from "react-bootstrap";
+import { Button } from "react-bootstrap";
+import { useContext } from "react";
+import { Context } from "../store/appContext";
+import DropdownItem from "react-bootstrap/esm/DropdownItem";
+
 
 export const Navbar = () => {
+	const { store, actions } = useContext(Context);
+	console.log(store.favorites);
 	return (
-		<nav className="navbar navbar-light bg-light mb-3">
+		<Nav className="navbar navbar-light bg-light mb-3">
 			<Link to="/">
-				<span className="navbar-brand mb-0 h1">React Boilerplate</span>
+				<img src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/6c/Star_Wars_Logo.svg/1024px-Star_Wars_Logo.svg.png" />
 			</Link>
-			<div className="ml-auto">
-				<Link to="/home">
-					<button className="btn btn-primary">Check the Context in action</button>
-				</Link>
-			</div>
-		</nav>
+			<Dropdown>
+				<Dropdown.Toggle className="toggle" variant="danger" id="dropdown-basic" size="lg">
+					Favorites
+				</Dropdown.Toggle>
+				<Dropdown.Menu>
+					{store.favorites.length > 0 ? (
+						store.favorites.map((favorite, i) => (
+							<Dropdown.Item href="#/action-1" key={i}>
+								{favorite}
+								<Button variant="danger" onClick={() => actions.favoritesInfo(favorite, i)}>
+									<i className="fas fa-trash-alt" />
+								</Button>
+							</Dropdown.Item>
+						))
+					) : (
+						<DropdownItem>There are no favorites</DropdownItem>
+					)}
+				</Dropdown.Menu>
+			</Dropdown>
+		</Nav>
 	);
 };
