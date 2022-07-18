@@ -18,7 +18,7 @@ export const Home = props => {
 			<Col className="scroll">
 				{store.people.map((person, i) => {
 					return (
-						<Card
+						<Card1
 							key={i}
 							name={person.name}
 							hair_color={person.hair_color}
