@@ -1,11 +1,11 @@
 import React from "react";
 import rigoImage from "../../img/rigo-baby.jpg";
 import "../../styles/home.css";
-import { Card } from "../component/Cards";
-import { Card2 } from "../component/Cards";
-import { Card3 } from "../component/Cards";
+import { Card } from "../component/cards.jsx";
+import { Card2 } from "../component/cards.jsx";
+import { Card3 } from "../component/cards.jsx";
 import { useContext } from "react";
-import { Col, Container } from "react-bootstrap";
+// import { Col, Container } from "react-bootstrap";
 import { Context } from "../store/appContext";
 
 

@@ -1,10 +1,10 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import { Dropdown, Nav } from "react-bootstrap";
-import { Button } from "react-bootstrap";
+// import { Dropdown, Nav } from "react-bootstrap";
+// import { Button } from "react-bootstrap";
 import { useContext } from "react";
 import { Context } from "../store/appContext";
-import DropdownItem from "react-bootstrap/esm/DropdownItem";
+// import DropdownItem from "react-bootstrap/esm/DropdownItem";
 
 
 export const Navbar = () => {

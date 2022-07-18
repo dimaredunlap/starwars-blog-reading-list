@@ -1,11 +1,11 @@
 import React, { useContext} from 'react';
-import "bootstrap/dist/css/bootstrap.min.css";
-import { Row, Col, Container } from "react-bootstrap";
+// import "bootstrap/dist/css/bootstrap.min.css";
+// import { Row, Col, Container } from "react-bootstrap";
 import { useParams } from "react-router-dom";
 import { Context } from "../store/appContext";
 
 export const People = props => {
-    const{ store} = useContext(Context);
+    const{ store, actions } = useContext(Context);
     const params = useParams();
     return (
         <Container fluid className="main">

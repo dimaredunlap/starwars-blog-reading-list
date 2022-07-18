@@ -1,6 +1,6 @@
 import React, { useContext } from "react";
-import "bootstrap/dist/css/bootstrap.min.css";
-import { Row, Col, Container } from "react-bootstrap";
+// import "bootstrap/dist/css/bootstrap.min.css";
+// import { Row, Col, Container } from "react-bootstrap";
 import { useParams } from "react-router-dom";
 import { Context } from "../store/appContext";
 
