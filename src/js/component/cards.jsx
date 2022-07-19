@@ -98,7 +98,7 @@ export const Card3 = props => {
 				<Card.Img
 					className="imagen"
 					variant="top"
-					src="https://starwars-visualguide.com/assets/img/planets/3.jpg"
+					src={store.image + props.uid + ".jpg"}
 				/>
 				<Card.Body>
 					<Card.Title>{props.name}</Card.Title>

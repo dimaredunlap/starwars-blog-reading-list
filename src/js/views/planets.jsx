@@ -13,7 +13,7 @@ export const Planets = props => {
 				<div>
 					<img
 						className="charimage"
-						src="https://starwars-visualguide.com/assets/img/planets/3.jpg"
+						src={store.image + props.uid + ".jpg"}
 					/>
 				</div>
 				<div>

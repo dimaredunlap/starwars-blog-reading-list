@@ -33,9 +33,10 @@ export const Home = props => {
 			</Col>
 			<h1 className="home">Vehicles</h1>
 			<Col className="scroll">
-				{/* {store.vehicles.map((vehicles, i) => {
+			{store.vehicles.results && store.vehicles.results.map((vehicles, i) => {
 					return (
 						<Card2
+							uid= {vehicles.uid}
 							key={i}
 							name={vehicles.name}
 							i={i}
@@ -44,13 +45,14 @@ export const Home = props => {
 							cost_in_credits={vehicles.cost_in_credits}
 						/>
 					);
-				})} */}
+				})}
 			</Col>
 			<h1 className="home">Planets</h1>
 			<Col className="scroll">
-				{/* {store.planets.map((planets, i) => {
+			{store.planets.results && store.planets.results.map((planets, i) => {
 					return (
 						<Card3
+							uid= {planets.uid}
 							key={i}
 							name={planets.name}
 							i={i}
@@ -64,7 +66,7 @@ export const Home = props => {
 							climate={planets.climate}
 						/>
 					);
-				})} */}
+				})}
 			</Col>
 		</Container>
 	);

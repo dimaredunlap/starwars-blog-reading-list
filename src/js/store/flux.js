@@ -4,7 +4,10 @@ const getState = ({ getStore, getActions, setStore }) => {
 			people: [
 
 			],
-			vehicle: [
+			vehicles: [
+
+			],
+			planets: [
 
 			],
 			favorites: [
@@ -24,7 +27,7 @@ const getState = ({ getStore, getActions, setStore }) => {
 				  .then((data) => setStore({ people: data }))
 				  .catch((err) => console.error(err, error));
 			},
-			getVehicle: () => {
+			getVehicles: () => {
 				var requestOptions = {
 					method: 'GET',
 					redirect: 'follow'
@@ -32,7 +35,18 @@ const getState = ({ getStore, getActions, setStore }) => {
 				  
 				  fetch("https://www.swapi.tech/api/vehicles", requestOptions)
 				  .then((res) => res.json())
-				  .then((data) => setStore({ vehicle: data }))
+				  .then((data) => setStore({ vehicles: data }))
+				  .catch((err) => console.error(err, error));
+			},
+			getPlanets: () => {
+				var requestOptions = {
+					method: 'GET',
+					redirect: 'follow'
+				  };
+				  
+				  fetch("https://www.swapi.tech/api/planet", requestOptions)
+				  .then((res) => res.json())
+				  .then((data) => setStore({ planets: data }))
 				  .catch((err) => console.error(err, error));
 			},
 			// Use getActions to call a function within a fuction
