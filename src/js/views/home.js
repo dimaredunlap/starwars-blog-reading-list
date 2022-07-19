@@ -12,7 +12,7 @@ import { Context } from "../store/appContext";
 
 export const Home = props => {
 	const { store, actions } = useContext(Context);
-	console.log("show",store);
+	// console.log("show",store);
 	return (
 		<Container fluid>
 			<h1 className="home">Characters</h1>
