@@ -1,7 +1,7 @@
 import React, { useContext} from 'react';
 // import "bootstrap/dist/css/bootstrap.min.css";
 import { useParams } from "react-router-dom";
-// import { Row, Col, Container } from "react-bootstrap";
+import { Row, Col, Container } from "react-bootstrap";
 import { Context } from "../store/appContext";
 
 export const Planets = props => {

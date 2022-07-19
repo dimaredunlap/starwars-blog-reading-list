@@ -1,6 +1,6 @@
 import React, { useContext} from 'react';
 // import "bootstrap/dist/css/bootstrap.min.css";
-// import { Row, Col, Container } from "react-bootstrap";
+import { Row, Col, Container } from "react-bootstrap";
 import { useParams } from "react-router-dom";
 import { Context } from "../store/appContext";
 
@@ -12,7 +12,7 @@ export const People = props => {
             <div className="d-flex">
                 <div>
                     <img className="charimage"
-						src="https://starwars-visualguide.com/assets/img/characters/3.jpg">
+						src={store.image + props.uid + ".jpg"}>
                     </img>
                 </div>
                 <div>

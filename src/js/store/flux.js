@@ -1,20 +1,40 @@
 const getState = ({ getStore, getActions, setStore }) => {
 	return {
 		store: {
-			demo: [
-				{
-					title: "FIRST",
-					background: "white",
-					initial: "white"
-				},
-				{
-					title: "SECOND",
-					background: "white",
-					initial: "white"
-				}
-			]
+			people: [
+
+			],
+			vehicle: [
+
+			],
+			favorites: [
+				
+			],
+			image: "https://starwars-visualguide.com/assets/img/characters/",
 		},
 		actions: {
+			getPeople: () => {
+				var requestOptions = {
+					method: 'GET',
+					redirect: 'follow'
+				  };
+				  
+				  fetch("https://www.swapi.tech/api/people", requestOptions)
+				  .then((res) => res.json())
+				  .then((data) => setStore({ people: data }))
+				  .catch((err) => console.error(err, error));
+			},
+			getVehicle: () => {
+				var requestOptions = {
+					method: 'GET',
+					redirect: 'follow'
+				  };
+				  
+				  fetch("https://www.swapi.tech/api/vehicles", requestOptions)
+				  .then((res) => res.json())
+				  .then((data) => setStore({ vehicle: data }))
+				  .catch((err) => console.error(err, error));
+			},
 			// Use getActions to call a function within a fuction
 			exampleFunction: () => {
 				getActions().changeColor(0, "green");

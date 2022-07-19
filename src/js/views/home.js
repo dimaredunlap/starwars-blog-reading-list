@@ -1,24 +1,26 @@
 import React from "react";
 import rigoImage from "../../img/rigo-baby.jpg";
 import "../../styles/home.css";
-import { Card } from "../component/cards.jsx";
+import { Card1 } from "../component/cards.jsx";
 import { Card2 } from "../component/cards.jsx";
 import { Card3 } from "../component/cards.jsx";
 import { useContext } from "react";
-// import { Col, Container } from "react-bootstrap";
+import { Col, Container } from "react-bootstrap";
 import { Context } from "../store/appContext";
 
 
 
 export const Home = props => {
 	const { store, actions } = useContext(Context);
+	console.log("show",store);
 	return (
 		<Container fluid>
 			<h1 className="home">Characters</h1>
 			<Col className="scroll">
-				{store.people.map((person, i) => {
+				{store.people.results && store.people.results.map((person, i) => {
 					return (
 						<Card1
+							uid= {person.uid}
 							key={i}
 							name={person.name}
 							hair_color={person.hair_color}
@@ -31,7 +33,7 @@ export const Home = props => {
 			</Col>
 			<h1 className="home">Vehicles</h1>
 			<Col className="scroll">
-				{store.vehicles.map((vehicles, i) => {
+				{/* {store.vehicles.map((vehicles, i) => {
 					return (
 						<Card2
 							key={i}
@@ -42,11 +44,11 @@ export const Home = props => {
 							cost_in_credits={vehicles.cost_in_credits}
 						/>
 					);
-				})}
+				})} */}
 			</Col>
 			<h1 className="home">Planets</h1>
 			<Col className="scroll">
-				{store.planets.map((planets, i) => {
+				{/* {store.planets.map((planets, i) => {
 					return (
 						<Card3
 							key={i}
@@ -62,7 +64,7 @@ export const Home = props => {
 							climate={planets.climate}
 						/>
 					);
-				})}
+				})} */}
 			</Col>
 		</Container>
 	);

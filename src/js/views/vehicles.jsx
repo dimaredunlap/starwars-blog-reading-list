@@ -1,6 +1,6 @@
 import React, { useContext } from "react";
 // import "bootstrap/dist/css/bootstrap.min.css";
-// import { Row, Col, Container } from "react-bootstrap";
+import { Row, Col, Container } from "react-bootstrap";
 import { useParams } from "react-router-dom";
 import { Context } from "../store/appContext";
 
@@ -13,8 +13,8 @@ export const Vehicles = props => {
 				<div>
 					<img
 						className="charimage"
-						src="https://starwars-visualguide.com/assets/img/vehicles/14.jpg"
-					/>
+						src={store.image + props.uid + ".jpg"}					
+						/>
 				</div>
 				<div>
 					<h1 className="display-4">{store.vehicles[params.theid].name}</h1>

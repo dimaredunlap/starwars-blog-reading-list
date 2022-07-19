@@ -2,36 +2,36 @@ import React, { useState, useEffect, useContext } from "react";
 // import "bootstrap/dist/css/bootstrap.min.css";
 import PropTypes from "prop-types";
 import { Link } from "react-router-dom";
-// import { Card } from "react-bootstrap";
-// import { Button } from "react-bootstrap";
-// import { Col, Row } from "react-bootstrap";
+import { Card } from "react-bootstrap";
+import { Button } from "react-bootstrap";
+import { Col, Row } from "react-bootstrap";
 import { Context } from "../store/appContext";
 import "../../styles/index.css";
 
-Card1.propTypes = {
-	name: PropTypes.string,
-	gender: PropTypes.string,
-	hair_color: PropTypes.string,
-	eye_color: PropTypes.string,
-	i: PropTypes.string,
-	source: PropTypes.string
-};
-Card2.propTypes = {
-	name: PropTypes.string,
-	i: PropTypes.string,
-	source: PropTypes.string,
-	model: PropTypes.string,
-	length: PropTypes.string,
-	cost_in_credits: PropTypes.string
-};
-Card3.propTypes = {
-	name: PropTypes.string,
-	i: PropTypes.string,
-	source: PropTypes.string,
-	terrain: PropTypes.string,
-	population: PropTypes.string,
-	climate: PropTypes.string
-};
+// Card1.propTypes = {
+// 	name: PropTypes.string,
+// 	gender: PropTypes.string,
+// 	hair_color: PropTypes.string,
+// 	eye_color: PropTypes.string,
+// 	i: PropTypes.string,
+// 	source: PropTypes.string
+// };
+// Card2.propTypes = {
+// 	name: PropTypes.string,
+// 	i: PropTypes.string,
+// 	source: PropTypes.string,
+// 	model: PropTypes.string,
+// 	length: PropTypes.string,
+// 	cost_in_credits: PropTypes.string
+// };
+// Card3.propTypes = {
+// 	name: PropTypes.string,
+// 	i: PropTypes.string,
+// 	source: PropTypes.string,
+// 	terrain: PropTypes.string,
+// 	population: PropTypes.string,
+// 	climate: PropTypes.string
+// };
 
 
 export const Card1 = props => {
@@ -42,7 +42,7 @@ export const Card1 = props => {
 				<Card.Img
 					className="imagen"
 					variant="top"
-					src="https://starwars-visualguide.com/assets/img/characters/3.jpg"
+					src={store.image + props.uid + ".jpg"}
 				/>
 				<Card.Body>
 					<Card.Title>{props.name}</Card.Title>
@@ -70,7 +70,7 @@ export const Card2 = props => {
 				<Card.Img
 					className="imagen"
 					variant="top"
-					src="https://starwars-visualguide.com/assets/img/vehicles/14.jpg"
+					src={store.image + props.uid + ".jpg"}
 				/>
 				<Card.Body>
 					<Card.Title>{props.name}</Card.Title>
