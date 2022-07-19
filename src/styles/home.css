@@ -6,3 +6,67 @@ img{
     width: 140px;
     margin-left: 200px;
 }
+.toggle{
+    margin-right: 100px;
+}
+
+.imagen{
+    margin: 0;
+    height: 20rem;
+}
+
+.scroll{
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    overflow-x: scroll;
+}
+
+.heart{
+    float: right;
+}
+
+.home{
+    color: yellow;
+}
+
+.display-4{
+    color: yellow;
+    text-align: center;
+    margin-top: 40px
+}
+
+.footer{
+    color: yellow;
+}
+
+.main{
+    background-color: #343a40;
+    margin-left: 40px;
+    margin-right: 40px;
+    margin-top: 60px;
+    height: 800px;
+}
+
+.charimage{
+    height: 600px;
+    width: 800px;
+    margin-top: 40px;
+}
+
+.chartext{
+    padding-left: 400px;
+    padding-right: 400px;
+    font-size: 35px;
+    color: white;
+    text-align: center;
+}
+
+.line{
+    border: 0.5px solid red;
+}
+
+.container{
+    color: white;
+}
+

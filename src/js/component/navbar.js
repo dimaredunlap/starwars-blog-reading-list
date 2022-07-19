@@ -20,18 +20,18 @@ export const Nav = () => {
 					Favorites
 				</Dropdown.Toggle>
 				<Dropdown.Menu>
-					{/* {store.favorites.length > 0 ? (
-						store.favorites.map((favorite, i) => (
+					{store.favorites.length > 0 ? (
+						store.favorites.map((favorites, i) => (
 							<Dropdown.Item href="#/action-1" key={i}>
-								{favorite}
-								<Button variant="danger" onClick={() => actions.favoritesInfo(favorite, i)}>
+								{favorites}
+								<Button variant="danger" onClick={() => actions.favoritesInfo(favorites, i)}>
 									<i className="fas fa-trash-alt" />
 								</Button>
 							</Dropdown.Item>
 						))
 					) : (
 						<DropdownItem>There are no favorites</DropdownItem>
-					)} */}
+					)}
 				</Dropdown.Menu>
 			</Dropdown>
 		</Navbar>
