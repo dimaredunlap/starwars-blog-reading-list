@@ -13,7 +13,7 @@ export const Planets = props => {
 				<div>
 					<img
 						className="charimage"
-						src="https://lumiere-a.akamaihd.net/v1/images/quasar-fire-class-cruiser-carrier-169_26592dcb.jpeg?region=0%2C0%2C1560%2C878&width=1536"
+						src="https://starwars-visualguide.com/assets/img/planets/3.jpg"
 					/>
 				</div>
 				<div>

@@ -8,6 +8,32 @@ import { Link } from "react-router-dom";
 import { Context } from "../store/appContext";
 import "../../styles/index.css";
 
+Card1.propTypes = {
+	name: PropTypes.string,
+	gender: PropTypes.string,
+	hair_color: PropTypes.string,
+	eye_color: PropTypes.string,
+	i: PropTypes.string,
+	source: PropTypes.string
+};
+Card2.propTypes = {
+	name: PropTypes.string,
+	i: PropTypes.string,
+	source: PropTypes.string,
+	model: PropTypes.string,
+	length: PropTypes.string,
+	cost_in_credits: PropTypes.string
+};
+Card3.propTypes = {
+	name: PropTypes.string,
+	i: PropTypes.string,
+	source: PropTypes.string,
+	terrain: PropTypes.string,
+	population: PropTypes.string,
+	climate: PropTypes.string
+};
+
+
 export const Card1 = props => {
 	const { store, actions } = useContext(Context);
 	return (
@@ -16,7 +42,7 @@ export const Card1 = props => {
 				<Card.Img
 					className="imagen"
 					variant="top"
-					src="https://lumiere-a.akamaihd.net/v1/images/r2-d2-main_86916bb6.jpeg?region=304%2C0%2C1778%2C1000&width=1536"
+					src="https://starwars-visualguide.com/assets/img/characters/3.jpg"
 				/>
 				<Card.Body>
 					<Card.Title>{props.name}</Card.Title>
@@ -44,7 +70,7 @@ export const Card2 = props => {
 				<Card.Img
 					className="imagen"
 					variant="top"
-					src="https://starwarsblog.starwars.com/wp-content/uploads/2020/12/hans-speeder-main-b_e7ca0176.jpg"
+					src="https://starwars-visualguide.com/assets/img/vehicles/14.jpg"
 				/>
 				<Card.Body>
 					<Card.Title>{props.name}</Card.Title>
@@ -72,7 +98,7 @@ export const Card3 = props => {
 				<Card.Img
 					className="imagen"
 					variant="top"
-					src="https://lumiere-a.akamaihd.net/v1/images/millennium-falcon-main-tlj-a_7cf89d3a.jpeg?region=0%2C0%2C1280%2C720"
+					src="https://starwars-visualguide.com/assets/img/planets/3.jpg"
 				/>
 				<Card.Body>
 					<Card.Title>{props.name}</Card.Title>
@@ -92,42 +118,3 @@ export const Card3 = props => {
 		</Col>
 	);
 };
-
-Card1.propTypes = {
-	name: PropTypes.string,
-	gender: PropTypes.string,
-	hair_color: PropTypes.string,
-	eye_color: PropTypes.string,
-	i: PropTypes.string,
-	source: PropTypes.string
-};
-Card2.propTypes = {
-	name: PropTypes.string,
-	i: PropTypes.string,
-	source: PropTypes.string,
-	model: PropTypes.string,
-	length: PropTypes.string,
-	cost_in_credits: PropTypes.string
-};
-Card3.propTypes = {
-	name: PropTypes.string,
-	i: PropTypes.string,
-	source: PropTypes.string,
-	terrain: PropTypes.string,
-	population: PropTypes.string,
-	climate: PropTypes.string
-};
-// Footer
-// © 2022 GitHub, Inc.
-// Footer navigation
-// Terms
-// Privacy
-// Security
-// Status
-// Docs
-// Contact GitHub
-// Pricing
-// API
-// Training
-// Blog
-// About

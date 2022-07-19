@@ -12,7 +12,7 @@ export const People = props => {
             <div className="d-flex">
                 <div>
                     <img className="charimage"
-						src="https://lumiere-a.akamaihd.net/v1/images/Darth-Vader_6bda9114.jpeg?region=0%2C23%2C1400%2C785">
+						src="https://starwars-visualguide.com/assets/img/characters/3.jpg">
                     </img>
                 </div>
                 <div>

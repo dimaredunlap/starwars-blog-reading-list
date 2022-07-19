@@ -13,7 +13,7 @@ export const Vehicles = props => {
 				<div>
 					<img
 						className="charimage"
-						src="https://lumiere-a.akamaihd.net/v1/images/juggernaut-transport-vehicle-main_09946f42.jpeg?region=329%2C0%2C951%2C536"
+						src="https://starwars-visualguide.com/assets/img/vehicles/14.jpg"
 					/>
 				</div>
 				<div>
