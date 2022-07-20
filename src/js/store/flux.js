@@ -6,6 +6,7 @@ const getState = ({ getStore, getActions, setStore }) => {
 			planets: [],
 			favorites: [],
 			person: [],
+			planet: [],
 			image: "https://starwars-visualguide.com/assets/img/characters/",
 		},
 		actions: {
@@ -52,6 +53,17 @@ const getState = ({ getStore, getActions, setStore }) => {
 				  .then((res) => res.json())
 				  .then((data) => setStore({ planets: data }))
 				  .catch((err) => console.error(err, error));
+			},
+			getPlanet: async (uid) => {
+				var requestOptions = {
+					method: 'GET',
+					redirect: 'follow'
+				  };
+				  
+				  await fetch(`https://www.swapi.tech/api/planets/${uid}`, requestOptions)
+					.then(response => response.json())
+					.then(result => setStore({ planet: result}))
+					.catch(error => console.log('error', error));
 			},
 		}
 	};

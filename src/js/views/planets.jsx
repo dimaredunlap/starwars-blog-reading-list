@@ -7,7 +7,10 @@ import { Context } from "../store/appContext";
 export const Planets = props => {
 	const { store, actions } = useContext(Context);
 	const params = useParams();
+	
 	return (
+		<div>
+            {store.planets.result ?(
 		<Container fluid className="main">
 			<div className="d-flex">
 				<div>
@@ -17,37 +20,29 @@ export const Planets = props => {
 					/>
 				</div>
 				<div>
-					<h1 className="display-4">{store.planets[params.theid].name}</h1>
-					<h4 className="chartext">
-                    Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.{" "}
-					</h4>
+					<p  className="chartext">
+					{store.planet.result.description}
+					</p>
 				</div>
 			</div>
 			<hr className="line" />
 			<Container>
 				<Row>
-					<Col>Name</Col>
-					<Col>Diameter</Col>
-					<Col>Rotation Period</Col>
-					<Col>Orbital Period</Col>
-					<Col>Gravity</Col>
-					<Col>Population</Col>
-                    <Col>Terrain</Col>
-                    <Col>Surface Water</Col>
-                    <Col>Climate</Col>
-				</Row>
-				<Row>
-					<Col>{store.planets[params.theid].name || "NA"}</Col>
-					<Col>{store.planets[params.theid].diameter || "NA"}</Col>
-					<Col>{store.planets[params.theid].rotation_period || "NA"}</Col>
-					<Col>{store.planets[params.theid].orbital_period || "NA"}</Col>
-					<Col>{store.planets[params.theid].gravity || "NA"}</Col>
-					<Col>{store.planets[params.theid].population || "NA"}</Col>
-                    <Col>{store.planets[params.theid].terrain || "NA"}</Col>
-                    <Col>{store.planets[params.theid].surface_water || "NA"}</Col>
-                    <Col>{store.planets[params.theid].climate || "NA"}</Col>
+					<Col>Name: {store.planets.result.properties.name}</Col>
+					<Col>Diameter: {store.planets.result.properties.diameter}</Col>
+					<Col>Rotation Period: {store.planets.result.properties.rotation_period}</Col>
+					<Col>Orbital Period: {store.planets.result.properties.orbital_period}</Col>
+					<Col>Gravity: {store.planets.result.properties.gravity}</Col>
+					<Col>Population: {store.planets.result.properties.population}</Col>
+                    <Col>Terrain: {store.planets.result.properties.terrain}</Col>
+                    <Col>Surface Water: {store.planets.result.properties.surface_water}</Col>
+                    <Col>Climate: {store.planets.result.properties.climate}</Col>
 				</Row>
 			</Container>
 		</Container>
-	);
-};
+		 ) : (
+			<h1>Loading</h1>
+		)}
+	</div>
+	)
+}

@@ -19,7 +19,6 @@ export const People = props => {
                     </img>
                 </div>
                 <div>
-					{/* <h1 className="display-4">{store.people[params.theid].name}</h1> */}
 					<p className="chartext">
                         {store.person.result.description}
 					</p>

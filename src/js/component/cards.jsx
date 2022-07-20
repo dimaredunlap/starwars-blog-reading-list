@@ -8,32 +8,6 @@ import { Col, Row } from "react-bootstrap";
 import { Context } from "../store/appContext";
 import "../../styles/index.css";
 
-// Card1.propTypes = {
-// 	name: PropTypes.string,
-// 	gender: PropTypes.string,
-// 	hair_color: PropTypes.string,
-// 	eye_color: PropTypes.string,
-// 	i: PropTypes.string,
-// 	source: PropTypes.string
-// };
-// Card2.propTypes = {
-// 	name: PropTypes.string,
-// 	i: PropTypes.string,
-// 	source: PropTypes.string,
-// 	model: PropTypes.string,
-// 	length: PropTypes.string,
-// 	cost_in_credits: PropTypes.string
-// };
-// Card3.propTypes = {
-// 	name: PropTypes.string,
-// 	i: PropTypes.string,
-// 	source: PropTypes.string,
-// 	terrain: PropTypes.string,
-// 	population: PropTypes.string,
-// 	climate: PropTypes.string
-// };
-
-
 export const Card1 = props => {
 	const { store, actions } = useContext(Context);
 	return (
@@ -108,7 +82,7 @@ export const Card3 = props => {
 						<tr>Climate: {props.climate}</tr>
 					</Card.Text>
 					<Link to={"/planets/" + props.i}>
-						<Button variant="primary">Learn More</Button>
+						<Button variant="primary" onClick={() => actions.getPlanet(props.uid)}>Learn More</Button>
 					</Link>
 					<Button className="heart" variant="warning">
 						<i className="far fa-heart" onClick={() => actions.favoritesInfo(props.name)} />
