@@ -7,7 +7,10 @@ import { Context } from "../store/appContext";
 export const People = props => {
     const{ store, actions } = useContext(Context);
     const params = useParams();
+    console.log("person", store);
     return (
+        <div>
+            {store.person.result ?(
         <Container fluid className="main">
             <div className="d-flex">
                 <div>
@@ -16,31 +19,27 @@ export const People = props => {
                     </img>
                 </div>
                 <div>
-					<h1 className="display-4">{store.people[params.theid].name}</h1>
-					<h4 className="chartext">
-                    Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.{" "}
-					</h4>
+					{/* <h1 className="display-4">{store.people[params.theid].name}</h1> */}
+					<p className="chartext">
+                        {store.person.result.description}
+					</p>
 				</div>
                 <hr className="horzline"/>
                 <Container>
                     <Row>
-                        <Col>Name</Col>
-                        <Col>Birth Year</Col>
-                        <Col>Gender</Col>
-                        <Col>Height</Col>
-                        <Col>Skin Color</Col>
-                        <Col>Eye Color</Col>
-                    </Row>
-                    <Row>
-                        <Col>{store.people[params.theid].name}</Col>
-                        <Col>{store.people[params.theid].birth_year}</Col>
-                        <Col>{store.people[params.theid].gender}</Col>
-                        <Col>{store.people[params.theid].height}</Col>
-                        <Col>{store.people[params.theid].skin_color || "NA"}</Col>
-                        <Col>{store.people[params.theid].eye_color}</Col>
+                        <Col>Name: {store.person.result.properties.name}</Col>
+                        <Col>Birth Year : {store.person.result.properties.birth_year}</Col>
+                        <Col>Gender: {store.person.result.properties.gender}</Col>
+                        <Col>Height: {store.person.result.properties.height}</Col>
+                        <Col>Skin Color: {store.person.result.properties.skin_color}</Col>
+                        <Col>Eye Color: {store.person.result.properties.eye_color}</Col>
                     </Row>
                 </Container>
             </div>
         </Container> 
+            ) : (
+                <h1>Loading</h1>
+            )}
+        </div>
     )
 }

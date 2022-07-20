@@ -5,7 +5,8 @@ const getState = ({ getStore, getActions, setStore }) => {
 			vehicles: [],
 			planets: [],
 			favorites: [],
-			image: null,
+			person: [],
+			image: "https://starwars-visualguide.com/assets/img/characters/",
 		},
 		actions: {
 			getPeople: () => {
@@ -18,6 +19,17 @@ const getState = ({ getStore, getActions, setStore }) => {
 				  .then((res) => res.json())
 				  .then((data) => setStore({ people: data }))
 				  .catch((err) => console.error(err, error));
+			},
+			getPerson: async (uid) => {
+				var requestOptions = {
+					method: 'GET',
+					redirect: 'follow'
+				  };
+				  
+				  await fetch(`https://www.swapi.tech/api/people/${uid}`, requestOptions)
+					.then(response => response.json())
+					.then(result => setStore({ person: result}))
+					.catch(error => console.log('error', error));
 			},
 			getVehicles: () => {
 				var requestOptions = {

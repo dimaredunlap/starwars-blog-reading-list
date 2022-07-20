@@ -52,7 +52,7 @@ export const Card1 = props => {
 						<Row>Eye-Color: {props.eye_color}</Row>
 					</Card.Text>
 					<Link to={"/people/" + props.i}>
-						<Button variant="primary">Learn More</Button>
+						<Button variant="primary" onClick={() => actions.getPerson(props.uid)}>Learn More</Button>
 					</Link>
 					<Button className="heart" variant="warning" onClick={() => actions.favoritesInfo(props.name)}>
 						<i className="far fa-heart" />
