@@ -1,18 +1,10 @@
 const getState = ({ getStore, getActions, setStore }) => {
 	return {
 		store: {
-			people: [
-
-			],
-			vehicles: [
-
-			],
-			planets: [
-
-			],
-			favorites: [
-				
-			],
+			people: [],
+			vehicles: [],
+			planets: [],
+			favorites: [],
 			image: "https://starwars-visualguide.com/assets/img/characters/",
 		},
 		actions: {
@@ -44,7 +36,7 @@ const getState = ({ getStore, getActions, setStore }) => {
 					redirect: 'follow'
 				  };
 				  
-				  fetch("https://www.swapi.tech/api/planet", requestOptions)
+				  fetch("https://www.swapi.tech/api/planets", requestOptions)
 				  .then((res) => res.json())
 				  .then((data) => setStore({ planets: data }))
 				  .catch((err) => console.error(err, error));
