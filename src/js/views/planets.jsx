@@ -28,15 +28,15 @@ export const Planets = props => {
 			<hr className="line" />
 			<Container>
 				<Row>
-					<Col>Name: {store.planets.result.properties.name}</Col>
-					<Col>Diameter: {store.planets.result.properties.diameter}</Col>
-					<Col>Rotation Period: {store.planets.result.properties.rotation_period}</Col>
-					<Col>Orbital Period: {store.planets.result.properties.orbital_period}</Col>
-					<Col>Gravity: {store.planets.result.properties.gravity}</Col>
-					<Col>Population: {store.planets.result.properties.population}</Col>
-                    <Col>Terrain: {store.planets.result.properties.terrain}</Col>
-                    <Col>Surface Water: {store.planets.result.properties.surface_water}</Col>
-                    <Col>Climate: {store.planets.result.properties.climate}</Col>
+					<Col>Name: {store.planet.result.properties.name}</Col>
+					<Col>Diameter: {store.planet.result.properties.diameter}</Col>
+					<Col>Rotation Period: {store.planet.result.properties.rotation_period}</Col>
+					<Col>Orbital Period: {store.planet.result.properties.orbital_period}</Col>
+					<Col>Gravity: {store.planet.result.properties.gravity}</Col>
+					<Col>Population: {store.planet.result.properties.population}</Col>
+                    <Col>Terrain: {store.planet.result.properties.terrain}</Col>
+                    <Col>Surface Water: {store.planet.result.properties.surface_water}</Col>
+                    <Col>Climate: {store.planet.result.properties.climate}</Col>
 				</Row>
 			</Container>
 		</Container>

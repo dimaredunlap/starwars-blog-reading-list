@@ -82,7 +82,7 @@ export const Card3 = props => {
 						<tr>Climate: {props.climate}</tr>
 					</Card.Text>
 					<Link to={"/planets/" + props.i}>
-						<Button variant="primary" onClick={() => actions.getPlanet(props.uid)}>Learn More</Button>
+						<Button variant="primary" onClick={() => actions.planetData(props.uid)}>Learn More</Button>
 					</Link>
 					<Button className="heart" variant="warning">
 						<i className="far fa-heart" onClick={() => actions.favoritesInfo(props.name)} />

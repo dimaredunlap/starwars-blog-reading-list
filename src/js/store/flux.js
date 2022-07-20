@@ -54,7 +54,7 @@ const getState = ({ getStore, getActions, setStore }) => {
 				  .then((data) => setStore({ planets: data }))
 				  .catch((err) => console.error(err, error));
 			},
-			getPlanet: async (uid) => {
+			planetData: async (uid) => {
 				var requestOptions = {
 					method: 'GET',
 					redirect: 'follow'
