@@ -3,7 +3,7 @@ body{
 }
 img{
     height: 90px;
-    width: 140px;
+    width: 70px;
     margin-left: 200px;
 }
 .toggle{
@@ -49,8 +49,8 @@ img{
 }
 
 .charimage{
-    height: 600px;
-    width: 800px;
+    height: 400px;
+    width: 300px;
     margin-top: 40px;
 }
 

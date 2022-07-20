@@ -23,9 +23,6 @@ export const Home = props => {
 							uid= {person.uid}
 							key={i}
 							name={person.name}
-							hair_color={person.hair_color}
-							eye_color={person.eye_color}
-							gender={person.gender}
 							i={i}
 						/>
 					);
@@ -40,9 +37,6 @@ export const Home = props => {
 							key={i}
 							name={vehicles.name}
 							i={i}
-							model={vehicles.model}
-							length={vehicles.length}
-							cost_in_credits={vehicles.cost_in_credits}
 						/>
 					);
 				})}
@@ -56,14 +50,6 @@ export const Home = props => {
 							key={i}
 							name={planets.name}
 							i={i}
-							diameter={planets.diameter}
-							rotation_period={planets.rotation_period}
-							orbital_period={planets.orbital_period}
-							gravity={planets.gravity}
-							population={planets.population}
-							terrain={planets.terrain}
-							surface_water={planets.surface_water}
-							climate={planets.climate}
 						/>
 					);
 				})}
