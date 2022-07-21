@@ -20,11 +20,6 @@ export const Card1 = props => {
 				/>
 				<Card.Body>
 					<Card.Title>{props.name}</Card.Title>
-					<Card.Text className="info">
-						<Row>Gender: {props.gender}</Row> 
-						<Row>Hair-Color: {props.hair_color}</Row>
-						<Row>Eye-Color: {props.eye_color}</Row>
-					</Card.Text>
 					<Link to={"/people/" + props.i}>
 						<Button variant="primary" onClick={() => actions.getPerson(props.uid)}>Learn More</Button>
 					</Link>
@@ -48,11 +43,6 @@ export const Card2 = props => {
 				/>
 				<Card.Body>
 					<Card.Title>{props.name}</Card.Title>
-					<Card.Text>
-						<tr>Model: {props.model}</tr>
-						<tr>Length: {props.length}</tr>
-						<tr>Cost: {props.cost_in_credits}</tr>
-					</Card.Text>
 					<Link to={"/vehicles/" + props.i}>
 						<Button variant="primary">Learn More</Button>
 					</Link>
@@ -76,13 +66,8 @@ export const Card3 = props => {
 				/>
 				<Card.Body>
 					<Card.Title>{props.name}</Card.Title>
-					<Card.Text>
-						<tr>Terrain: {props.terrain}</tr>
-						<tr>Population: {props.population}</tr>
-						<tr>Climate: {props.climate}</tr>
-					</Card.Text>
 					<Link to={"/planets/" + props.i}>
-						<Button variant="primary" onClick={() => actions.planetData(props.uid)}>Learn More</Button>
+						<Button variant="primary" onClick={() => actions.getPlanet(props.uid)}>Learn More</Button>
 					</Link>
 					<Button className="heart" variant="warning">
 						<i className="far fa-heart" onClick={() => actions.favoritesInfo(props.name)} />

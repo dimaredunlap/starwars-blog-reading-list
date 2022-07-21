@@ -8,6 +8,8 @@ export const Vehicles = props => {
 	const { store, actions } = useContext(Context);
 	const params = useParams();
 	return (
+		<div>
+		{store.vehicle.result ?(
 		<Container fluid className="main">
 			<div className="d-flex">
 				<div>
@@ -17,31 +19,26 @@ export const Vehicles = props => {
 						/>
 				</div>
 				<div>
-					<h1 className="display-4">{store.vehicles[params.theid].name}</h1>
-					<h4 className="chartext">
-                    Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.{" "}
-					</h4>
+				<p className="chartext">
+                        {store.vehicle.result.description}
+					</p>
 				</div>
 			</div>
 			<hr className="line" />
 			<Container>
 				<Row>
-					<Col>Name</Col>
-					<Col>Model</Col>
-					<Col>Length</Col>
-					<Col>Cost in Credits</Col>
-					<Col>Vehicle Class</Col>
-					<Col>Crew</Col>
-				</Row>
-				<Row>
-					<Col>{store.vehicles[params.theid].name}</Col>
-					<Col>{store.vehicles[params.theid].model}</Col>
-					<Col>{store.vehicles[params.theid].length}</Col>
-					<Col>{store.vehicles[params.theid].cost_in_credits}</Col>
-					<Col>{store.vehicles[params.theid].vehicle_class || "NA"}</Col>
-					<Col>{store.vehicles[params.theid].crew}</Col>
+					<Col>Name: {store.vehicle.result.properties.name}</Col>
+					<Col>Model: {store.vehicle.result.properties.model}</Col>
+					<Col>Length: {store.vehicle.result.properties.length}</Col>
+					<Col>Cost in Credits: {store.vehicle.result.properties.cost_in_credits}</Col>
+					<Col>Vehicle Class: {store.vehicle.result.properties.vehicle_class}</Col>
+					<Col>Crew: {store.vehicle.result.properties.crew}</Col>
 				</Row>
 			</Container>
 		</Container>
+		) : (
+			<h1>Loading</h1>
+		)}
+	</div>
 	);
 };

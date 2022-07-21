@@ -10,7 +10,7 @@ export const Planets = props => {
 	
 	return (
 		<div>
-            {store.planets.result ?(
+            {store.planet.result ?(
 		<Container fluid className="main">
 			<div className="d-flex">
 				<div>

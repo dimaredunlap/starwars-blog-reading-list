@@ -12,25 +12,24 @@ import { Context } from "../store/appContext";
 
 export const Home = props => {
 	const { store, actions } = useContext(Context);
-	// console.log("show",store);
+	console.log("props",props);
 	return (
 		<Container fluid>
 			<h1 className="home">Characters</h1>
 			<Col className="scroll">
-				{store.people.results && store.people.results.map((person, i) => {
+				{store.people.map((person, i) => {
 					return (
 						<Card1
 							uid= {person.uid}
 							key={i}
 							name={person.name}
-							i={i}
-						/>
+							i={i}						/>
 					);
 				})}
 			</Col>
 			<h1 className="home">Vehicles</h1>
 			<Col className="scroll">
-			{store.vehicles.results && store.vehicles.results.map((vehicles, i) => {
+				{store.vehicles.map((vehicles, i) => {
 					return (
 						<Card2
 							uid= {vehicles.uid}
@@ -43,7 +42,7 @@ export const Home = props => {
 			</Col>
 			<h1 className="home">Planets</h1>
 			<Col className="scroll">
-			{store.planets.results && store.planets.results.map((planets, i) => {
+				{store.planets.map((planets, i) => {
 					return (
 						<Card3
 							uid= {planets.uid}

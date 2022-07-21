@@ -18,7 +18,7 @@ const getState = ({ getStore, getActions, setStore }) => {
 				  
 				  fetch("https://www.swapi.tech/api/people", requestOptions)
 				  .then((res) => res.json())
-				  .then((data) => setStore({ people: data }))
+				  .then((data) => setStore({ people: data.results }))
 				  .catch((err) => console.error(err, error));
 			},
 			getPerson: async (uid) => {
@@ -29,41 +29,54 @@ const getState = ({ getStore, getActions, setStore }) => {
 				  
 				  await fetch(`https://www.swapi.tech/api/people/${uid}`, requestOptions)
 					.then(response => response.json())
-					.then(result => setStore({ person: result}))
+					.then(data => setStore({ person: data}))
 					.catch(error => console.log('error', error));
 			},
-			getVehicles: () => {
-				var requestOptions = {
-					method: 'GET',
-					redirect: 'follow'
-				  };
-				  
-				  fetch("https://www.swapi.tech/api/vehicles", requestOptions)
-				  .then((res) => res.json())
-				  .then((data) => setStore({ vehicles: data }))
-				  .catch((err) => console.error(err, error));
+			getPlanets: async () => {
+				try {
+					const response = await fetch("https://www.swapi.tech/api/planets");
+					if (response.ok) {
+						const data = await response.json();
+						setStore({ planets:data.results })
+					}
+				} catch (error) {
+					throw Error(error);
+				}
 			},
-			getPlanets: () => {
-				var requestOptions = {
-					method: 'GET',
-					redirect: 'follow'
-				  };
-				  
-				  fetch("https://www.swapi.tech/api/planets", requestOptions)
-				  .then((res) => res.json())
-				  .then((data) => setStore({ planets: data }))
-				  .catch((err) => console.error(err, error));
+
+			getPlanet: async (uid) => {
+				try {
+					const response = await fetch(`https://www.swapi.tech/api/planets/${uid}`);
+					if (response.ok) {
+						const data = await response.json();
+						setStore({ planet:data})
+					}
+				} catch (error) {
+					throw Error(error);
+				}
 			},
-			planetData: async (uid) => {
-				var requestOptions = {
-					method: 'GET',
-					redirect: 'follow'
-				  };
-				  
-				  await fetch(`https://www.swapi.tech/api/planets/${uid}`, requestOptions)
-					.then(response => response.json())
-					.then(result => setStore({ planet: result}))
-					.catch(error => console.log('error', error));
+			getVehicles: async () => {
+				try {
+					const response = await fetch("https://www.swapi.tech/api/starships");
+					if (response.ok) {
+						const data = await response.json();
+						setStore({ vehicles:data.results })
+					}
+				} catch (error) {
+					throw Error(error);
+				}
+			},
+
+			getVehicle: async (uid) => {
+				try {
+					const response = await fetch(`https://www.swapi.tech/api/starships/${uid}`);
+					if (response.ok) {
+						const data = await response.json();
+						setStore({ vehicle:data})
+					}
+				} catch (error) {
+					throw Error(error);
+				}
 			},
 		}
 	};
