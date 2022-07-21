@@ -1,4 +1,4 @@
-import React, { useContext} from 'react';
+import React, { useContext, useEffect } from 'react';
 // import "bootstrap/dist/css/bootstrap.min.css";
 import { Row, Col, Container } from "react-bootstrap";
 import { useParams } from "react-router-dom";
@@ -6,7 +6,10 @@ import { Context } from "../store/appContext";
 
 export const People = props => {
     const{ store, actions } = useContext(Context);
-    const params = useParams();
+    const {theid} = useParams();
+    useEffect(() => {
+        actions.getPerson(theid)
+    },[]);
     console.log("person", store);
     return (
         <div>

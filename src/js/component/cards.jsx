@@ -21,7 +21,7 @@ export const Card1 = props => {
 				<Card.Body>
 					<Card.Title>{props.name}</Card.Title>
 					<Link to={"/people/" + props.i}>
-						<Button variant="primary" onClick={() => actions.getPerson(props.uid)}>Learn More</Button>
+						<Button variant="primary">Learn More</Button>
 					</Link>
 					<Button className="heart" variant="warning" onClick={() => actions.favoritesInfo(props.name)}>
 						<i className="far fa-heart" />
@@ -43,11 +43,11 @@ export const Card2 = props => {
 				/>
 				<Card.Body>
 					<Card.Title>{props.name}</Card.Title>
-					<Link to={"/vehicles/" + props.i}>
+					<Link to={"/vehicles/" + props.uid}>
 						<Button variant="primary">Learn More</Button>
 					</Link>
 					<Button className="heart" variant="warning">
-						<i className="far fa-heart" onClick={() => actions.favoritesInfo(props.name)} />
+						<i className="far fa-heart" onClick={() => actions.get(props.name)} />
 					</Button>
 				</Card.Body>
 			</Card>
@@ -67,7 +67,7 @@ export const Card3 = props => {
 				<Card.Body>
 					<Card.Title>{props.name}</Card.Title>
 					<Link to={"/planets/" + props.i}>
-						<Button variant="primary" onClick={() => actions.getPlanet(props.uid)}>Learn More</Button>
+						<Button variant="primary">Learn More</Button>
 					</Link>
 					<Button className="heart" variant="warning">
 						<i className="far fa-heart" onClick={() => actions.favoritesInfo(props.name)} />
