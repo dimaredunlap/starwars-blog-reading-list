@@ -2,17 +2,21 @@ body{
     background-image: url("https://t4.ftcdn.net/jpg/03/15/25/45/360_F_315254526_BguE2UPiesByZ4CA7HQoMAASbWeltDIv.jpg");
 }
 img{
-    height: 90px;
-    width: 70px;
-    margin-left: 200px;
+    height: 70px;
+    width: 90px;
+    margin-left: 100px;
 }
 .toggle{
-    margin-right: 100px;
+  float: right;
+  margin-left: 990px;
 }
 
 .imagen{
-    margin: 0;
-    height: 20rem;
+    height: 25rem;
+    width: 20rem;
+    margin: auto;
+    padding-left: 2px;
+    padding-right: 2px;
 }
 
 .scroll{

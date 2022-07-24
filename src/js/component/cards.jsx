@@ -12,7 +12,7 @@ export const Card1 = props => {
 	const { store, actions } = useContext(Context);
 	return (
 		<Col>
-			<Card className="bg-dark text-white" style={{ width: "30rem" }}>
+			<Card className="bg-dark text-white">
 				<Card.Img
 					className="imagen"
 					variant="top"
@@ -35,7 +35,7 @@ export const Card2 = props => {
 	const { store, actions } = useContext(Context);
 	return (
 		<Col>
-			<Card className="bg-dark text-white" style={{ width: "30rem" }}>
+			<Card className="bg-dark text-white">
 				<Card.Img
 					className="imagen"
 					variant="top"
@@ -58,7 +58,7 @@ export const Card3 = props => {
 	const { store, actions } = useContext(Context);
 	return (
 		<Col>
-			<Card className="bg-dark text-white" style={{ width: "30rem" }}>
+			<Card className="bg-dark text-white">
 				<Card.Img
 					className="imagen"
 					variant="top"

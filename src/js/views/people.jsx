@@ -26,7 +26,7 @@ export const People = props => {
                         {store.person.result.description}
 					</p>
 				</div>
-                <hr className="horzline"/>
+                <hr className="line"/>
                 <Container>
                     <Row>
                         <Col>Name: {store.person.result.properties.name}</Col>
