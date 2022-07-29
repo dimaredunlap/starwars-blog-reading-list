@@ -8,7 +8,7 @@ export const Planets = props => {
 	const { store, actions } = useContext(Context);
 	const {theid} = useParams();
     useEffect(() => {
-        actions.getPerson(theid)
+        actions.getPlanet(theid)
     },[]);
 	return (
 		<div>

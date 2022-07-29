@@ -34,9 +34,7 @@ const injectContext = PassedComponent => {
 			state.actions.getPeople();
 			state.actions.getVehicles();
 			state.actions.getPlanets();
-			state.actions.getPerson();
-			state.actions.getPlanet();
-			state.actions.getVehicle();
+			
 		}, []);
 
 		// The initial value for the context is not null anymore, but the current state of this component,

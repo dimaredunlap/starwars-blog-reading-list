@@ -20,7 +20,7 @@ export const Card1 = props => {
 				/>
 				<Card.Body>
 					<Card.Title>{props.name}</Card.Title>
-					<Link to={"/people/" + props.i}>
+					<Link to={"/people/" + props.uid}>
 						<Button variant="primary">Learn More</Button>
 					</Link>
 					<Button className="heart" variant="warning" onClick={() => actions.favoritesInfo(props.name)}>

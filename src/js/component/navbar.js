@@ -15,7 +15,7 @@ export const Nav = () => {
 			<Link to="/">
 				<img src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/6c/Star_Wars_Logo.svg/1024px-Star_Wars_Logo.svg.png" />
 			</Link>
-			<Dropdown>
+			<Dropdown className="dropdown">
 				<Dropdown.Toggle className="toggle" variant="danger" id="dropdown-basic">
 					Favorites
 				</Dropdown.Toggle>

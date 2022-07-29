@@ -22,15 +22,15 @@ const getState = ({ getStore, getActions, setStore }) => {
 				  .catch((err) => console.error(err, error));
 			},
 			getPerson: async (uid) => {
-				var requestOptions = {
-					method: 'GET',
-					redirect: 'follow'
-				  };
-				  
-				  await fetch(`https://www.swapi.tech/api/people/${uid}`, requestOptions)
-					.then(response => response.json())
-					.then(data => setStore({ person: data}))
-					.catch(error => console.log('error', error));
+				try {
+					const response = await fetch(`https://www.swapi.tech/api/people/${uid}`);
+					if (response.ok) {
+						const data = await response.json();
+						setStore({ person:data})
+					}
+				} catch (error) {
+					throw Error(error);
+				}
 			},
 			getPlanets: async () => {
 				try {
@@ -78,6 +78,7 @@ const getState = ({ getStore, getActions, setStore }) => {
 					throw Error(error);
 				}
 			},
+			getFavorites: 
 		}
 	};
 };
