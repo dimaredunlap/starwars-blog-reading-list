@@ -8,11 +8,11 @@ export const Vehicles = props => {
 	const { store, actions } = useContext(Context);
 	const {theid} = useParams();
     useEffect(() => {
-        actions.getPerson(theid)
+        actions.getVehicle(theid)
     },[]);
 	return (
 		<div>
-		{store.vehicle.result ?(
+		{store.vehicle ?(
 		<Container fluid className="main">
 			<div className="d-flex">
 				<div>

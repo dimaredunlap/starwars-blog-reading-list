@@ -66,7 +66,7 @@ export const Card3 = props => {
 				/>
 				<Card.Body>
 					<Card.Title>{props.name}</Card.Title>
-					<Link to={"/planets/" + props.i}>
+					<Link to={"/planets/" + props.uid}>
 						<Button variant="primary">Learn More</Button>
 					</Link>
 					<Button className="heart" variant="warning">

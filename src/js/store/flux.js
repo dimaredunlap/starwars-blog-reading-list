@@ -73,12 +73,12 @@ const getState = ({ getStore, getActions, setStore }) => {
 					if (response.ok) {
 						const data = await response.json();
 						setStore({ vehicle:data})
+						console.log("vehicle data", data)
 					}
 				} catch (error) {
 					throw Error(error);
 				}
 			},
-			getFavorites: 
 		}
 	};
 };
